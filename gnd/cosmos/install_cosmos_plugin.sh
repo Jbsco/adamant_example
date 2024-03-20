@@ -16,12 +16,12 @@ adamant_example_plugin_dir=`realpath ../../src/assembly/${adamant_assembly_name_
 adamant_protocol_dir=`realpath ../../../adamant/gnd/cosmos`
 # Get requested protocols in plugin.txt:
 requested_protocol_array=($(grep \"*.rb "${adamant_example_plugin_dir}/${adamant_assembly_name}_ccsds_cosmos_plugin.txt" | cut -d' ' -f5))
-echo cp $adamant_example_plugin_dir/${adamant_assembly_name}_ccsds_cosmos_commands.txt $cosmos_plugin_dir/targets/${adamant_assembly_name^^}/cmd_tlm/cmd.txt
-echo cp $adamant_example_plugin_dir/${adamant_assembly_name}_ccsds_cosmos_telemetry.txt $cosmos_plugin_dir/targets/${adamant_assembly_name^^}/cmd_tlm/tlm.txt
-echo cp $adamant_example_plugin_dir/${adamant_assembly_name}_ccsds_cosmos_plugin.txt $cosmos_plugin_dir/plugin.txt
+cp $adamant_example_plugin_dir/${adamant_assembly_name}_ccsds_cosmos_commands.txt $cosmos_plugin_dir/targets/${adamant_assembly_name^^}/cmd_tlm/cmd.txt
+cp $adamant_example_plugin_dir/${adamant_assembly_name}_ccsds_cosmos_telemetry.txt $cosmos_plugin_dir/targets/${adamant_assembly_name^^}/cmd_tlm/tlm.txt
+cp $adamant_example_plugin_dir/${adamant_assembly_name}_ccsds_cosmos_plugin.txt $cosmos_plugin_dir/plugin.txt
 # Check requested protocols against those available from Adamant:
 for i in "${requested_protocol_array[@]}"; do
     if [ -f $adamant_protocol_dir/$i ]
-    then echo cp $adamant_protocol_dir/$i $cosmos_plugin_dir/targets/${adamant_assembly_name^^}/lib/$i
+    then cp $adamant_protocol_dir/$i $cosmos_plugin_dir/targets/${adamant_assembly_name^^}/lib/$i
     fi
 done
