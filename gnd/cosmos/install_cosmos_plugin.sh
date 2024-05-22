@@ -11,13 +11,13 @@ cosmos_install_name=$2
 if [[ $1 == "" ]]
  then
  echo "Adamant assembly name argument not provided."
- echo "Usage: \"./install_cosmos_plugin.sh Adamant_assembly_name path_to_COSMOS_directory\""
+ echo "Usage: \"./install_cosmos_plugin.sh path_to_assembly.yaml path_to_COSMOS_directory\""
  echo "Exiting."
  exit 1
 elif [[ $2 == "" ]]
  then
  echo "COSMOS installation location argument not provided."
- echo "Usage: \"./install_cosmos_plugin.sh Adamant_assembly_name path_to_COSMOS_directory\""
+ echo "Usage: \"./install_cosmos_plugin.sh path_to_assembly.yaml path_to_COSMOS_directory\""
  echo "Exiting."
  exit 1
 fi
