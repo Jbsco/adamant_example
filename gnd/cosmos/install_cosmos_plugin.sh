@@ -4,7 +4,7 @@
 # Copy COSMOS plugin configuration to argument directory
 # This will likely be moved to the Adamant repository
 # COSMOS install directory argument should be relative to the Linux example path
-# Ex. `./install_cosmos_plugin.sh linux_example cosmos-project` if COSMOS is adjacent to adamant_example
+# Ex. `./install_cosmos_plugin.sh ../../src/assembly/linux/linux_example.assembly.yaml ../../../cosmos-project` if COSMOS is adjacent to adamant_example
 
 adamant_assembly_dir=$1 # relative path to assembly yaml file
 cosmos_install_dir=$2 # relative path to COSMOS installation
