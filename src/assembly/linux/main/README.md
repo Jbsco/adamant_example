@@ -88,9 +88,9 @@ $ cd adamant_example/src/assembly/linux/main
 $ redo cosmos_config
 ```
 
-This generates the plugin configuration file and its respective command and telemetry configurations in the `adamant_example/src/assembly/linux/build/cosmos/plugin/` directory.
+This generates the plugin configuration file and its respective command and telemetry configurations in the `adamant_example/src/assembly/linux/build/cosmos/plugin/` directory. The plugin configuration template file is located in the `adamant_example/src/assembly/linux/build/cosmos/template/` directory, and should be reviewed to ensure the interface and required protocols are correct. By default, this template applies settings specific to this example and should be modified for other configurations.
 
-A helper script, which takes the relative paths to the Adamant assembly yaml file and COSMOS install directory as arguments, is provided to copy the plugin configuration files, and any custom protocols requested by the configuration, to the correct directories. If the COSMOS and Adamant example project directories are adjacent, complete the configuration by running:
+A helper script, which takes the relative paths to the Adamant assembly yaml file and COSMOS install directory as arguments, is provided to copy the plugin configuration files, and any custom protocols used by the configuration, to the correct directories. If the COSMOS and Adamant example project directories are adjacent, complete the configuration by running:
 
 ```
 $ cd adamant_example/gnd/cosmos
