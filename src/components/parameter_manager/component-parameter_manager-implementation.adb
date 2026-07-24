@@ -177,7 +177,7 @@ package body Component.Parameter_Manager.Implementation is
       use Parameter_Enums.Parameter_Table_Operation_Type;
    begin
       -- Send a get request to default:
-      if not Self.Copy_To_From_Default ((Region => Self.Parameter_Bytes_Region, Operation => Get)) then
+      if not Self.Copy_To_From_Default ((Region => Self.Parameter_Bytes_Region, Operation => Get_Copy)) then
          return Failure;
       end if;
 
@@ -200,7 +200,7 @@ package body Component.Parameter_Manager.Implementation is
       use Parameter_Enums.Parameter_Table_Operation_Type;
    begin
       -- Send a get request to default:
-      if not Self.Copy_To_From_Working ((Region => Self.Parameter_Bytes_Region, Operation => Get)) then
+      if not Self.Copy_To_From_Working ((Region => Self.Parameter_Bytes_Region, Operation => Get_Copy)) then
          return Failure;
       end if;
 
