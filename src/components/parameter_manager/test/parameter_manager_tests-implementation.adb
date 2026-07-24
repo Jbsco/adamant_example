@@ -146,7 +146,7 @@ package body Parameter_Manager_Tests.Implementation is
       Natural_Assert.Eq (T.Default_Parameters_Memory_Region_Recv_Sync_History.Get_Count, 1);
       Parameters_Memory_Region_Assert.Eq (
          T.Default_Parameters_Memory_Region_Recv_Sync_History.Get (1),
-         (Region => T.Get_Parameter_Bytes_Region, Operation => Get)
+         (Region => T.Get_Parameter_Bytes_Region, Operation => Get_Copy)
       );
       Natural_Assert.Eq (T.Working_Parameters_Memory_Region_Recv_Sync_History.Get_Count, 1);
       Parameters_Memory_Region_Assert.Eq (
@@ -194,7 +194,7 @@ package body Parameter_Manager_Tests.Implementation is
       Natural_Assert.Eq (T.Working_Parameters_Memory_Region_Recv_Sync_History.Get_Count, 1);
       Parameters_Memory_Region_Assert.Eq (
          T.Working_Parameters_Memory_Region_Recv_Sync_History.Get (1),
-         (Region => T.Get_Parameter_Bytes_Region, Operation => Get)
+         (Region => T.Get_Parameter_Bytes_Region, Operation => Get_Copy)
       );
       Natural_Assert.Eq (T.Default_Parameters_Memory_Region_Recv_Sync_History.Get_Count, 1);
       Parameters_Memory_Region_Assert.Eq (
@@ -245,7 +245,7 @@ package body Parameter_Manager_Tests.Implementation is
       Natural_Assert.Eq (T.Working_Parameters_Memory_Region_Recv_Sync_History.Get_Count, 1);
       Parameters_Memory_Region_Assert.Eq (
          T.Working_Parameters_Memory_Region_Recv_Sync_History.Get (1),
-         (Region => T.Get_Parameter_Bytes_Region, Operation => Get)
+         (Region => T.Get_Parameter_Bytes_Region, Operation => Get_Copy)
       );
       -- No copy to default:
       Natural_Assert.Eq (T.Default_Parameters_Memory_Region_Recv_Sync_History.Get_Count, 0);
@@ -280,7 +280,7 @@ package body Parameter_Manager_Tests.Implementation is
       Natural_Assert.Eq (T.Working_Parameters_Memory_Region_Recv_Sync_History.Get_Count, 2);
       Parameters_Memory_Region_Assert.Eq (
          T.Working_Parameters_Memory_Region_Recv_Sync_History.Get (2),
-         (Region => T.Get_Parameter_Bytes_Region, Operation => Get)
+         (Region => T.Get_Parameter_Bytes_Region, Operation => Get_Copy)
       );
       -- Copy to default:
       Natural_Assert.Eq (T.Default_Parameters_Memory_Region_Recv_Sync_History.Get_Count, 1);
@@ -319,7 +319,7 @@ package body Parameter_Manager_Tests.Implementation is
       Natural_Assert.Eq (T.Default_Parameters_Memory_Region_Recv_Sync_History.Get_Count, 2);
       Parameters_Memory_Region_Assert.Eq (
          T.Default_Parameters_Memory_Region_Recv_Sync_History.Get (2),
-         (Region => T.Get_Parameter_Bytes_Region, Operation => Get)
+         (Region => T.Get_Parameter_Bytes_Region, Operation => Get_Copy)
       );
       -- Copy to default:
       Natural_Assert.Eq (T.Working_Parameters_Memory_Region_Recv_Sync_History.Get_Count, 3);
@@ -358,7 +358,7 @@ package body Parameter_Manager_Tests.Implementation is
       Natural_Assert.Eq (T.Default_Parameters_Memory_Region_Recv_Sync_History.Get_Count, 3);
       Parameters_Memory_Region_Assert.Eq (
          T.Default_Parameters_Memory_Region_Recv_Sync_History.Get (3),
-         (Region => T.Get_Parameter_Bytes_Region, Operation => Get)
+         (Region => T.Get_Parameter_Bytes_Region, Operation => Get_Copy)
       );
       -- Copy to default:
       Natural_Assert.Eq (T.Working_Parameters_Memory_Region_Recv_Sync_History.Get_Count, 3);
@@ -398,7 +398,7 @@ package body Parameter_Manager_Tests.Implementation is
       Natural_Assert.Eq (T.Working_Parameters_Memory_Region_Recv_Sync_History.Get_Count, 1);
       Parameters_Memory_Region_Assert.Eq (
          T.Working_Parameters_Memory_Region_Recv_Sync_History.Get (1),
-         (Region => T.Get_Parameter_Bytes_Region, Operation => Get)
+         (Region => T.Get_Parameter_Bytes_Region, Operation => Get_Copy)
       );
       -- No copy to default:
       Natural_Assert.Eq (T.Default_Parameters_Memory_Region_Recv_Sync_History.Get_Count, 0);
@@ -429,7 +429,7 @@ package body Parameter_Manager_Tests.Implementation is
       Natural_Assert.Eq (T.Default_Parameters_Memory_Region_Recv_Sync_History.Get_Count, 1);
       Parameters_Memory_Region_Assert.Eq (
          T.Default_Parameters_Memory_Region_Recv_Sync_History.Get (1),
-         (Region => T.Get_Parameter_Bytes_Region, Operation => Get)
+         (Region => T.Get_Parameter_Bytes_Region, Operation => Get_Copy)
       );
 
       -- Check events:

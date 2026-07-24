@@ -82,7 +82,7 @@ package body Component.Parameter_Manager.Implementation.Tester is
       use Parameter_Enums.Parameter_Table_Operation_Type;
    begin
       -- If it is a get then fill in the data:
-      if Arg.Operation = Get then
+      if Arg.Operation = Get_Copy then
          declare
             subtype Safe_Byte_Array_Type is Basic_Types.Byte_Array (0 .. Arg.Region.Length - 1);
             Safe_Byte_Array : Safe_Byte_Array_Type with Import, Convention => Ada, Address => Arg.Region.Address;
@@ -100,7 +100,7 @@ package body Component.Parameter_Manager.Implementation.Tester is
       use Parameter_Enums.Parameter_Table_Operation_Type;
    begin
       -- If it is a get then fill in the data:
-      if Arg.Operation = Get then
+      if Arg.Operation = Get_Copy then
          declare
             subtype Safe_Byte_Array_Type is Basic_Types.Byte_Array (0 .. Arg.Region.Length - 1);
             Safe_Byte_Array : Safe_Byte_Array_Type with Import, Convention => Ada, Address => Arg.Region.Address;
